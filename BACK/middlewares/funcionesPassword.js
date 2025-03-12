@@ -25,10 +25,10 @@ export function usuarioAutorizado(token, req){
             return mensajes(400, 'Usuario no autorizado', error);
         } else {
             req.usuario = usuario;
-            return mensajes(200, 'Bienvenido dentro del if', usuario);
+            return mensajes(200, 'Bienvenido', usuario);
         }
     });
-    return mensajes(200, 'Bienvenido fuera del if', req.usuario);
+    return mensajes(200, 'Bienvenido', req.usuario);
 }
 
 export async function adminAutorizado(respuesta){
